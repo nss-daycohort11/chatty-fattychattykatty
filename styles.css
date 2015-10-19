@@ -41,6 +41,9 @@ h1 {
 h3 {
 	margin-left: 5%;
 }
-#delete-button {
+.delete-button {
+	margin-left: 15px;
+}
+.edit {
 	margin-left: 15px;
 }

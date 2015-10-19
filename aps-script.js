@@ -1,3 +1,6 @@
+//******************EDIT MODE************************
+var editButtonSibling;
+var editMode = false;
 
 //**************DECLARE VARIABLES******************
 var inputText = document.getElementById("enter-message");
@@ -9,12 +12,17 @@ var messageBoard = document.getElementById("messages");
 //***************ENTER MESSAGE***********************
 document.getElementById("enter-message").addEventListener("keyup", function() {
 	if (event.keyCode === 13) {
-		var inputMessage = "<p>"
+		if (editMode === false) {
+		var inputMessage = "<p><span class='only-text'>"
 		inputMessage += inputText.value
-		inputMessage += "<button id='delete-button'>Delete</button>"
+		inputMessage += "</span><button class='edit'>Edit</button><button class='delete-button'>Delete</button>"
 		inputMessage += "</p>"
 		messageBoard.innerHTML += inputMessage;
 		inputText.value = "";
+	    } else if (editMode === true) {
+	    	editButtonSibling.innerHTML = inputText.value;
+	    	editMode = false;
+	    }
 	}
 	console.log("message-board", messageBoard.innerHTML.length);
 	if (messageBoard.innerHTML.length > 0) {
@@ -45,10 +53,25 @@ document.querySelector("body").addEventListener("click", function(event) {
   console.log("event", event);
   // Handle the click event on any P
   // event.target
-  if (event.target.id === "delete-button") {
+  if (event.target.className === "delete-button") {
 	event.target.parentNode.remove();
 	}
 })
+//*****************EDIT BUTTON**********************************
+document.querySelector("body").addEventListener("click", function(event) {
+  console.log("event", event);
+  if (event.target.className === "edit") {
+  	editButtonSibling = event.target.previousSibling;
+  	inputText.value = editButtonSibling.innerHTML;
+  	editMode = true;
+  }
+})
+  	//document.getElementById("enter-message").addEventListener("keyup", function() {
+	// if (event.keyCode === 13) {
+	// 	event.target.previousSibling.innerHTML = inputText.value;
+	// }
+ //  })
+ //  }
 
 
 
