@@ -1,0 +1,27 @@
+h1 {
+	display: inline;
+	margin: 15px;
+}
+#enter-message {
+	width: 390px;
+	border: 1px solid black;
+	height: 20px;
+
+}
+#clear-message {
+	margin: 15px;
+	border: 1px solid black;
+	height: 25px;
+}
+#checkboxes {
+	margin-left: 115px;
+}
+#messages {
+	border: 1px solid black;
+	display: block;
+	height: 380px;
+	margin: 0 5%;
+}
+h3 {
+	margin-left: 5%;
+}
