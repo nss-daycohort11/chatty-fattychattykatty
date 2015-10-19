@@ -9,21 +9,34 @@
 
 </head>
 
-<body>
+<body id="body">
   <nav id="navigation">
-    <h1>Chatty!</h1>
-    <input type="text" id="enter-message" placeholder="Enter message">
-    <button id="clear-message">Clear message board</button>
+  	<div>
+		<h1>Chatty!</h1>
+		<input type="text" id="enter-message" placeholder="Enter message">
+		<button id="clear-message" disabled="true">Clear message board</button>
+	</div>
+  	<div id="checkboxes">
+	    <input type="checkbox" id="dark-theme">Dark theme
+	    <input type="checkbox" id="large-text">Large text
+	 </div>
   </nav>
-  <div id="checkboxes">
-    <input type="checkbox" id="dark-theme">Dark theme
-    <input type="checkbox" id="large-text">Large text
-  </div>
+  <!-- *****************HIDDEN NAV***************** -->
+  <nav id="hidden">
+  	<div>
+		<h1>Chatty!</h1>
+		<input type="text" id="enter-message" placeholder="Enter message">
+		<button id="clear-message" disabled="true">Clear message board</button>
+	</div>
+  	<div id="checkboxes">
+	    <input type="checkbox" id="dark-theme">Dark theme
+	    <input type="checkbox" id="large-text">Large text
+	 </div>
+  </nav>
+  <!-- **********************MESSAGE BOX****************** -->
   <div id="message-container">
     <h3>Messages:</h3>
-    <div id="messages">
-      
-    </div>
+    <div id="messages"></div>
   </div>
 
 

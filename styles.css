@@ -1,3 +1,19 @@
+.dark {
+	background-color: gray;
+	color: white;
+}
+.large {
+	font-size: 2em;
+}
+
+#navigation {
+	position: fixed;
+	background-color: darkgray;
+}
+#hidden {
+	visibility: hidden;
+}
+
 h1 {
 	display: inline;
 	margin: 15px;
@@ -19,9 +35,12 @@ h1 {
 #messages {
 	border: 1px solid black;
 	display: block;
-	height: 380px;
+	min-height: 380px;
 	margin: 0 5%;
 }
 h3 {
 	margin-left: 5%;
+}
+#delete-button {
+	margin-left: 15px;
 }
