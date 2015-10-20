@@ -53,6 +53,7 @@ document.getElementById("enter-message").addEventListener("keyup", function() {
 //***********SETTING CLEAR MESSAGE TO DISABLED***********
 clearMessage.addEventListener("click", function () {
 	document.getElementById("messages").innerHTML = "";
+	messageBox = [""];
 	clearMessage.setAttribute("disabled", true);
 });
 
